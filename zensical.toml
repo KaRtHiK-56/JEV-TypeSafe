@@ -1,0 +1,27 @@
+[project]
+site_name = "JEV_Expirements"
+site_url = "https://KaRtHiK-56.github.io/python_boilerplate/"
+repo_url = "https://github.com/KaRtHiK-56/python_boilerplate"
+repo_name = "KaRtHiK-56/python_boilerplate"
+
+nav = [
+  { "Home" = "index.md" },
+  { "Installation" = "installation.md" },
+  { "Usage" = "usage.md" },
+  { "API Reference" = "api.md" },
+]
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+toggle.icon = "material/brightness-7"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+toggle.icon = "material/brightness-4"
+toggle.name = "Switch to light mode"
+
+[project.plugins.mkdocstrings.handlers.python]
+paths = ["src"]
