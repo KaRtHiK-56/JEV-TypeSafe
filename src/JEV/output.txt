@@ -90,3 +90,27 @@ QUESTION : Rate and state the severity of the issue from 1 to 10
 2026-10-04 08:22:36,813 - __main__ - INFO - Calculated Cost: $0.00001348
 2026-10-04 08:22:36,814 - __main__ - INFO - 
 ======================================================================================================================================================
+                                                    JEV (MCP TOOL SELECTION)
+======================================================================================================================================================
+
+
+Enter the state to take a decison: logs failing for agent requests giving 404 error
+2026-10-04 15:07:16 - __main__ - INFO - Selected state: logs failing for agent requests giving 404 error
+2026-10-04 15:07:16 - typesafe_sdk - INFO - <- 200 in 896ms (request -)
+2026-10-04 15:07:16 - __main__ - INFO - ==================================================
+2026-10-04 15:07:16 - __main__ - INFO - Complete JEV Response: model='jev-1.13' usage=Usage(input_tokens=675, output_tokens=113) answers={'is_mcp_routable': NoulAnswer(type='noul', noul=0.58), 'mcp_server': ChoiceAnswer(type='choice', choice='Elasticsearch', confidence=0.99, probabilities={'Atlassian': 0.0, 'Context7': 0.0, 'DeepWiki': 0.0, 'Elasticsearch': 1.0, 'Fliesystem': 0.0, 'MongoDB': 0.0, 'Perplexity': 0.0, 'Stripe': 0.0})}
+2026-10-04 15:07:16 - __main__ - INFO - ==================================================
+2026-10-04 15:07:16 - __main__ - INFO - 
+2026-10-04 15:07:16 - __main__ - INFO - Is MCP routable: 0.58
+2026-10-04 15:07:16 - __main__ - INFO - Selected server: Elasticsearch | Confidence: 0.99 | Probabilities: {'Atlassian': 0.0, 'Context7': 0.0, 'DeepWiki': 0.0, 'Elasticsearch': 1.0, 'Fliesystem': 0.0, 'MongoDB': 0.0, 'Perplexity': 0.0, 'Stripe': 0.0} | MCP Routable Noul: 0.58
+2026-10-04 15:07:16 - __main__ - INFO - MCP routing is confident enough to execute automatically
+2026-10-04 15:07:16 - __main__ - INFO - Selected server: Elasticsearch
+2026-10-04 15:07:16 - __main__ - INFO - Server info: {'description': 'Interact with your Elasticsearch logs and indices through natural language conversations.', 'tools': {'list_indices': 'Lists all available Elasticsearch indices in the cluster.', 'get_mappings': 'Gets the structural field mappings and data types for a specific index.', 'search': 'Executes complex data searches using Elasticsearch Query DSL.', 'esql': 'Executes direct ES|QL queries for advanced analytics and logging analysis.'}}
+2026-10-04 15:07:16 - __main__ - INFO - Available tools: {'list_indices': 'Lists all available Elasticsearch indices in the cluster.', 'get_mappings': 'Gets the structural field mappings and data types for a specific index.', 'search': 'Executes complex data searches using Elasticsearch Query DSL.', 'esql': 'Executes direct ES|QL queries for advanced analytics and logging analysis.'}
+2026-10-04 15:08:18 - typesafe_sdk - INFO - <- 200 in 1025ms (request -)
+2026-10-04 15:08:18 - __main__ - INFO - Tool response: model='jev-1.13' usage=Usage(input_tokens=509, output_tokens=52) answers={'mcp_tool': ChoiceAnswer(type='choice', choice='search', confidence=0.64, probabilities={'esql': 0.25, 'get_mappings': 0.0, 'list_indices': 0.02, 'search': 0.73})}
+2026-10-04 15:08:18 - __main__ - INFO - Selected tool: search | Confidence: 0.64 | Probabilities: {'esql': 0.25, 'get_mappings': 0.0, 'list_indices': 0.02, 'search': 0.73}
+2026-10-04 15:09:18 - typesafe_sdk - INFO - <- 200 in 924ms (request -)
+2026-10-04 15:09:18 - __main__ - INFO - Score response: model='jev-1.13' usage=Usage(input_tokens=452, output_tokens=18) answers={'selection_quality': ScoreAnswer(type='score', score=2.85, confidence=0.44, legend={0: 'Completely inappropriate', 1: 'Mostly inappropriate', 2: 'Partially appropriate', 3: 'Appropriate', 4: 'Highly appropriate'}, probabilities={0: 0.01, 1: 0.06, 2: 0.26, 3: 0.41000000000000003, 4: 0.26})}
+2026-10-04 15:09:18 - __main__ - INFO - Selection quality: Appropriate | Confidence: 44.00
+======================================================================================================================================================

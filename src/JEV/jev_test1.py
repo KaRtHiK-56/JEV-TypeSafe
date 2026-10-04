@@ -59,11 +59,9 @@ try:
 
     PRICE_PER_MILLION_INPUT = 0.042
     
-    # Read values from the Pydantic usage object directly
     in_tokens = response.usage.input_tokens
     out_tokens = response.usage.output_tokens
     
-    # Financial calculation step
     calculated_cost = (in_tokens / 1_000_000) * PRICE_PER_MILLION_INPUT
 
     logger.info("--- Resource & Token Billing ---")
